@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <!-- Vistas formulario -->
+    <record model="ir.ui.view" id="view.form.modelo">
+      <field name="name">mi_modelo.view.form.modelo</field>
+      <field name="model">mi.modelo</field>
+      <field name="arch" type="xml">
+        <form>
+         <sheet>
+          <field name="name"/>
+          <field name="description"/>
+         </sheet>
+        </form>
+      </field>
+    </record>
+
+   <!-- Acciones de Ventana -->
+    <record model="ir.actions.act_window" id="action_view_asignatura">
+      <field name="name">Asignaturas</field>
+      <field name="res_model">school.subject</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_estudiante">
+      <field name="name">Estudiantes</field>
+      <field name="res_model">school.student</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_view_profesor">
+      <field name="name">Profesores</field>
+      <field name="res_model">school.teacher</field>
+    </record>
+
+    <!-- Menús -->
+
+    <menuitem name="Modelo" id="menu_main_modelo" parent=""/>
+
+    <menuitem name="Asignatura" id="menu_asignatura" parent="menu_main_modelo"
+              action="modelo.action_view_asignatura"/>
+
+    <menuitem name="Estudiante" id="menu_estudiante" parent="menu_main_modelo"
+              action="modelo.action_view_estudiante"/>
+
+    <menuitem name="Profesor" id="menu_profesor" parent="menu_main_modelo"
+              action="modelo.action_view_profesor"/>                   
+  </data>
+</odoo>

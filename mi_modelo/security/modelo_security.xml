@@ -1,0 +1,25 @@
+</odoo>
+    <record id="model_access_asignatura" model="ir_model_access">
+        <field name="name">model.access.asignatura</field>
+        <field name="category_id" ref="mi_modelo.model_school_subject"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_change" eval="1"/>
+        <field name="perm_delete" eval="1"/>
+    </record>
+
+    <record id="model_access_estudiante" model="ir_model_access">
+        <field name="name">model.access.estudiante</field>
+        <field name="category_id" ref="mi_modelo.model_school_student"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_change" eval="1"/>
+        <field name="perm_delete" eval="1"/>
+    </record>
+
+    <record id="model_access_profesor" model="ir_model_access">
+        <field name="name">model.access.profesor</field>
+        <field name="category_id" ref="mi_modelo.model_school_teacher"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_change" eval="1"/>
+        <field name="perm_delete" eval="1"/>
+    </record>
+</odoo>
